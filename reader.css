@@ -32,8 +32,33 @@
     --reader-text: #d6d6d6;
     --reader-muted: #7d7d7d;
     --reader-rule: #2e2e2e;
+    --reader-accent: #7fd4b0;
     --reader-font: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
     --reader-ui-font: "JetBrains Mono", "Fira Code", "Cascadia Code", "DejaVu Sans Mono", ui-monospace, monospace;
+}
+
+:root[data-theme="terminal"][data-accent="orange"] {
+    --reader-accent: #e8a15a;
+}
+
+:root[data-theme="terminal"][data-accent="red"] {
+    --reader-accent: #ef7a7a;
+}
+
+:root[data-theme="terminal"][data-accent="purple"] {
+    --reader-accent: #b39ddb;
+}
+
+:root[data-theme="terminal"][data-accent="blue"] {
+    --reader-accent: #7aa2f7;
+}
+
+:root[data-theme="terminal"][data-accent="yellow"] {
+    --reader-accent: #e6c07b;
+}
+
+:root[data-theme="terminal"][data-accent="pink"] {
+    --reader-accent: #f5a3c7;
 }
 
 html,
@@ -68,7 +93,7 @@ body {
 
 :root[data-theme="terminal"] .reader h1::before {
     content: "# ";
-    color: #7fd4b0;
+    color: var(--reader-accent);
     font-family: var(--reader-ui-font);
 }
 
