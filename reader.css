@@ -1,0 +1,61 @@
+:root {
+    --reader-bg: #fbf8f4;
+    --reader-text: #231d18;
+    --reader-muted: #7a6d62;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --reader-bg: #171310;
+        --reader-text: #f4e8de;
+        --reader-muted: #a8988a;
+    }
+}
+
+html,
+body {
+    margin: 0;
+
+    background: var(--reader-bg);
+    color: var(--reader-text);
+}
+
+.reader {
+    max-width: 40em;
+
+    margin: 0 auto;
+    padding: 48px 20px 96px;
+
+    font-family:
+        "Hiragino Mincho ProN",
+        "Yu Mincho",
+        "Noto Serif JP",
+        serif;
+
+    font-size: 21px;
+    line-height: 2;
+}
+
+.reader h1 {
+    margin: 0 0 1.2em;
+
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+.reader p {
+    margin: 0 0 1em;
+}
+
+.reader-meta,
+.reader-missing {
+    color: var(--reader-muted);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    line-height: 1.5;
+}

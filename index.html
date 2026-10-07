@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" data-anki-always-show-summary-bar>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!--
+        The text never reaches this server: it travels in the URL's
+        #fragment, which browsers don't send with the request.
+    -->
+    <meta
+        name="referrer"
+        content="no-referrer"
+    >
+
+    <title>Reader</title>
+
+    <link
+        rel="stylesheet"
+        href="reader.css"
+    >
+</head>
+
+<body>
+
+<main class="reader">
+
+    <p
+        id="reader-meta"
+        class="reader-meta"
+        lang="en"
+    ></p>
+
+    <article id="reader-article">
+
+        <h1 id="reader-title"></h1>
+
+        <div id="reader-text"></div>
+
+    </article>
+
+    <p
+        id="reader-missing"
+        class="reader-missing"
+        lang="en"
+        hidden
+    >
+        Nothing to read here - open a text from the Anki Japanese Highlighter's Discover tab.
+    </p>
+
+</main>
+
+<script src="reader.js"></script>
+
+</body>
+
+</html>
