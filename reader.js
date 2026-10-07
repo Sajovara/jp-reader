@@ -6,8 +6,9 @@
  * page.
  *
  * The text arrives in the URL fragment as base64url-encoded UTF-8
- * JSON {title, text, meta} and is only ever decoded and rendered
- * here, in the browser.
+ * JSON {title, text, meta, theme} and is only ever decoded and
+ * rendered here, in the browser. theme is the extension's UI theme,
+ * since this page can't read the extension's storage itself.
  */
 function decodeFragment(
     fragment
@@ -85,6 +86,15 @@ function render() {
 
     article.hidden = false;
     missing.hidden = true;
+
+    if (
+        ["warm", "light", "terminal"].includes(
+            entry.theme
+        )
+    ) {
+        document.documentElement.dataset.theme =
+            entry.theme;
+    }
 
     document.title =
         entry.title || "Reader";
