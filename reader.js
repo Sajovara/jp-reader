@@ -88,7 +88,7 @@ function render() {
     missing.hidden = true;
 
     if (
-        ["warm", "light", "terminal"].includes(
+        ["warm", "light", "terminal", "yoru"].includes(
             entry.theme
         )
     ) {

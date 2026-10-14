@@ -22,6 +22,19 @@
     --reader-muted: #7a6d62;
 }
 
+/* Yoru: always dark, gold accent (from Yomikomi). A public page: no
+   font files of its own, Zen Kaku Gothic only if it is installed. */
+
+:root[data-theme="yoru"] {
+    --reader-bg: #0f1116;
+    --reader-text: #f1ece2;
+    --reader-muted: #a59f94;
+    --reader-rule: rgba(255, 255, 255, 0.08);
+    --reader-accent: #d8b673;
+    --reader-font: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    --reader-ui-font: "Zen Kaku Gothic New", "Noto Sans CJK JP", sans-serif;
+}
+
 /*
  * Terminal: flat near-black, monospace for everything around the text.
  * The Japanese itself stays in a gothic face - CJK in a code font
