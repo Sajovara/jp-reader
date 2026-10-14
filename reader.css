@@ -88,7 +88,8 @@ body {
     margin: 0 auto;
     padding: 48px 20px 96px;
 
-    font-family: var(--reader-font);
+    /* the Japanese font chosen in the extension, if any */
+    font-family: var(--anki-jp-font, var(--reader-font));
 
     font-size: 21px;
     line-height: 2;
